@@ -11,11 +11,20 @@ import tailwind from '../assets/technologies/tailwind.svg'
 import github from '../assets/social/github.svg'
 import redux from '../assets/technologies/redux.svg'
 import postman from '../assets/technologies/postman.svg'
-import mongo from '../assets/technologies/mongo.svg'
+import mongo from '../assets/technologies/mongodb.svg'
 import nodejs from '../assets/technologies/nodejs.svg'
+import aws from '../assets/technologies/aws.svg'
 
 const Card = () => {
     const [values, setValues] = useState([
+        {
+            img: "https://chat.shivchauhan.com/assets/favicon-BAZAmbJW.svg",
+            name: "Chat App",
+            description: "100% Secure Chap App with Rooms",
+            tech: [html, css, react, vscode, tailwind, github, aws, nodejs, postman],
+            codeLink: "https://github.com/shivchauhan795/chat-app/",
+            liveLink: "https://chat.shivchauhan.com/",
+        },
         {
             img: "https://enlacee.vercel.app/assets/favicon-vmh91X9M.gif",
             name: "Enlacee",
@@ -56,14 +65,14 @@ const Card = () => {
             codeLink: "https://github.com/shivchauhan795/KeyShield",
             liveLink: "https://keyshield.netlify.app/",
         },
-        {
-            img: "https://github.com/shivchauhan795/Chatter-Application/blob/main/src/assets/favicon.png?raw=true",
-            name: "Chatter Application",
-            description: "A Chat Application with Custom Room ID. Login with Google Sign In. Real Time Synchronization of chats.",
-            tech: [html, css, react, firebase, github],
-            codeLink: "https://github.com/shivchauhan795/Chatter-Application",
-            liveLink: "https://chatter-application.netlify.app/",
-        },
+        // {
+        //     img: "https://github.com/shivchauhan795/Chatter-Application/blob/main/src/assets/favicon.png?raw=true",
+        //     name: "Chatter Application",
+        //     description: "A Chat Application with Custom Room ID. Login with Google Sign In. Real Time Synchronization of chats.",
+        //     tech: [html, css, react, firebase, github],
+        //     codeLink: "https://github.com/shivchauhan795/Chatter-Application",
+        //     liveLink: "https://chatter-application.netlify.app/",
+        // },
         {
             img: "https://raw.githubusercontent.com/shivchauhan795/QR-Textify/main/favicon.ico",
             name: "QR Textify",
