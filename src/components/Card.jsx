@@ -14,9 +14,20 @@ import postman from '../assets/technologies/postman.svg'
 import mongo from '../assets/technologies/mongodb.svg'
 import nodejs from '../assets/technologies/nodejs.svg'
 import aws from '../assets/technologies/aws.svg'
-
+import secondBrain from '../assets/secondBrain.png'
+import nextjs from '../assets/technologies/nextjs.svg'
+import prisma from '../assets/technologies/prisma.svg'
 const Card = () => {
     const [values, setValues] = useState([
+        // <img src="" alt="brain">
+        {
+            img: secondBrain,
+            name: "Second Brain",
+            description: "One stop solution for your goto links",
+            tech: [nextjs, prisma, tailwind, github, aws, nodejs, vscode, postman],
+            codeLink: "https://github.com/shivchauhan795/second-brain",
+            liveLink: "https://second-brain.shivchauhan.com/",
+        },
         {
             img: "https://chat.shivchauhan.com/assets/favicon-BAZAmbJW.svg",
             name: "Chat App",
