@@ -33,13 +33,20 @@ const Navbar = () => {
                     <HashLink smooth to={"#home"}><span className='font-bold text-2xl uppercase cursor-pointer'>Shiv Chauhan</span></HashLink>
                 </div>
 
-                <button className="mobile-menu-button">
-                    <ul className='flex gap-4'>
-                        <li onClick={() => { alert(`Button currently not functional!!`) }}>&#9776;</li>
-                        <li onClick={handleChange} className='cursor-pointer hover:font-bold transition-all'>{themeIcon}</li>
-                    </ul>
+                {/* Hamburger Button */}
+                <button className="mobile-menu-button md:hidden" onClick={() => setisopen(!isopen)}>
+                    <span className="text-3xl">&#9776;</span>
                 </button>
 
+                {/* Mobile menu */}
+                <ul className={`absolute top-16 left-0 w-full flex flex-col items-center gap-6 py-4 shadow-md transition-all duration-300 ${isopen ? 'block' : 'hidden'} md:hidden`}>
+                    <HashLink smooth to={"#projects"} onClick={() => setisopen(false)}><li className='cursor-pointer hover:font-bold transition-all'>Projects</li></HashLink>
+                    <HashLink smooth to={"#about"} onClick={() => setisopen(false)}><li className='cursor-pointer hover:font-bold transition-all'>About</li></HashLink>
+                    <HashLink smooth to={"#contact"} onClick={() => setisopen(false)}><li className='cursor-pointer hover:font-bold transition-all'>Contact</li></HashLink>
+                    <li onClick={handleChange} className='cursor-pointer hover:font-bold transition-all'>{themeIcon}</li>
+                </ul>
+                
+                {/* Desktop menu */}
                 <ul className={`flex gap-8 menu ${isopen ? 'block' : 'hidden'} `}>
                     <HashLink smooth to={"#projects"}><li className='cursor-pointer hover:font-bold transition-all'>Project</li></HashLink>
                     <HashLink smooth to={"#about"}>
