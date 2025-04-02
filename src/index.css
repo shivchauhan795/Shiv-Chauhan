@@ -102,24 +102,11 @@ h2 {
 
 .typing-effect {
   display: inline;
-  border-right: 2px solid black;
-  animation: blink-caret 0.75s step-end infinite;
   font-family: "Bebas Neue", sans-serif;
   font-weight: 800;
   font-style: normal;
 }
 
-@keyframes blink-caret {
-
-  from,
-  to {
-    border-color: transparent;
-  }
-
-  50% {
-    border-color: black;
-  }
-}
 
 /* about section tech scroll effect */
 .tech {

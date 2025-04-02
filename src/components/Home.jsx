@@ -11,7 +11,7 @@ const Home = () => {
 
       <div className='flex flex-col items-start gap-2 pl-2'>
         <div className='flex items-center'>
-          <span className='shiv uppercase text-5xl p-3 gap-2 flex flex-col w-[410px] h-48'>
+          <span className='shiv uppercase text-4xl p-3 gap-2 flex flex-col w-[340px] h-48'>
             hi, i am
             <TypingEffect />
           </span>

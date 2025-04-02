@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import { HashLink } from 'react-router-hash-link'
+import Menu from '../assets/Menu.jsx'
+import Close from '../assets/Close.jsx'
 
 const Navbar = () => {
     const icons = ["☀️", "🌙"]
     const [themeIcon, setthemeIcon] = useState(icons[0])
     const [theme, setTheme] = useState('dark')
     const [isopen, setisopen] = useState(true)
+    const [isDropdownOpen, setisDropdownOpen] = useState(false)
 
     useEffect(() => {
         document.documentElement.setAttribute('data-theme', theme);
@@ -35,7 +38,15 @@ const Navbar = () => {
 
                 <button className="mobile-menu-button">
                     <ul className='flex gap-4'>
-                        <li onClick={() => { alert(`Button currently not functional!!`) }}>&#9776;</li>
+                        <li onClick={() => { setisDropdownOpen(!isDropdownOpen) }}>{isDropdownOpen ? <Close /> : <Menu />}</li>
+                        {/* menu in mobile view */}
+                        {isDropdownOpen &&
+                            <div className='absolute right-12 top-16 w-28 h-fit bg-slate-50 rounded text-black flex flex-col z-50'>
+                                <HashLink smooth to={"#projects"} className='bg-transparent text-current p-2 cursor-pointer'>Project</HashLink>
+                                <HashLink smooth to={"#about"} className='bg-transparent text-current p-2 cursor-pointer'>About</HashLink>
+                                <HashLink smooth to={"#contact"} className='bg-transparent text-current p-2 cursor-pointer'>Contact</HashLink>
+                            </div>
+                        }
                         <li onClick={handleChange} className='cursor-pointer hover:font-bold transition-all'>{themeIcon}</li>
                     </ul>
                 </button>
