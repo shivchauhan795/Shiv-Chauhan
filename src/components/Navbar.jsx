@@ -31,7 +31,7 @@ const Navbar = () => {
 
     return (
         <div>
-            <nav className='navbar flex justify-between px-24 py-7 items-center w-full fixed'>
+            <nav className='navbar flex justify-between px-24 py-7 items-center w-full fixed z-50'>
                 <div className="logo">
                     <HashLink smooth to={"#home"}><span className='font-bold text-2xl uppercase cursor-pointer'>Shiv Chauhan</span></HashLink>
                 </div>
