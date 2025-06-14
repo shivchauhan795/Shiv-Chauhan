@@ -4,11 +4,21 @@ import App from './App.jsx'
 import './index.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Navbar from './components/Navbar.jsx'
+import Landing from './pages/landing/Landing.jsx'
+import About from './pages/about/About.jsx'
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <><Navbar /><App /></>
+  },
+  {
+    path: "work",
+    element: <Landing />
+  },
+  {
+    path: "about",
+    element: <About />
   },
 ])
 

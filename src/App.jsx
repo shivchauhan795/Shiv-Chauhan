@@ -8,13 +8,13 @@ import Footer from './components/Footer'
 function App() {
 
   return (
-    <>
+    <div className='old-font'>
       <Home />
       <Projects />
       <About />
       <Contact />
       <Footer />
-    </>
+    </div>
   )
 }
 

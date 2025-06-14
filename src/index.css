@@ -2,6 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  scrollbar-width: none;
+}
+
+.myfont {
+  font-family: "Instrument Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: auto;
+  font-style: normal;
+}
+
+.myspecialfont {
+  font-family: "Young Serif", serif;
+  font-optical-sizing: auto;
+  font-weight: auto;
+  font-style: normal;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Lateef:wght@200;300;400;500;600;700;800&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
@@ -24,7 +42,7 @@
   --primary-home-contact-color: #D3E97A;
 }
 
-* {
+.old-font {
   background-color: var(--primary-bg-color);
   color: var(--primary-text-color);
   font-family: "Lateef", serif;
