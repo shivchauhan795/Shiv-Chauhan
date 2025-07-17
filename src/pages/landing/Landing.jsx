@@ -1,7 +1,9 @@
 import Footer from '../../components/common/Footer'
 import Navbar from '../../components/common/Navbar'
+import BottomBanner from '../../components/landing/BottomBanner'
 import Hero from '../../components/landing/Hero'
 import Projects from '../../components/landing/Projects'
+import TechStackUsed from '../../components/landing/TechStackUsed'
 import Testimonials from '../../components/landing/Testimonials'
 
 const Landing = () => {
@@ -10,7 +12,9 @@ const Landing = () => {
             <Navbar />
             <Hero />
             <Projects />
-            <Testimonials />
+            <TechStackUsed/>
+            {/* <Testimonials /> */}
+            <BottomBanner/>
             <Footer />
         </div>
     )

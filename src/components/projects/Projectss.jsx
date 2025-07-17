@@ -1,22 +1,20 @@
-import { Link } from 'react-router-dom';
 import Project1 from '../../assets/landing/project1.svg';
-
-const Projects = () => {
+const Projectss = () => {
     const projects = [
         {
             id: 1,
             title: "Ottermap Website design",
             description1: "The revamped website design help Ottermap achieved",
             description2: "80% of new customer retention",
-            github: "none",
+            github: "https://github.com/shivchauhan795/ottermap-website",
             live: "https://www.ottermap.com/",
             image: Project1
         },
     ];
     return (
-        <div className='pt-1 px-20 max-sm:px-10 pb-1 myfont'>
-            <div className='font-semibold text-3xl max-xl:text-2xl max-sm:text-xl pb-12'>
-                Projects I worked on
+        <div className="myfont px-20 max-lg:px-10 mt-24">
+            <div className="font-semibold text-4xl max-lg:text-2xl text-[#000000] mb-12">
+                My more Projects
             </div>
             <div className='flex flex-col gap-20 max-sm:gap-10'>
                 {
@@ -39,7 +37,7 @@ const Projects = () => {
                                 </div>
                                 <div className='flex gap-6 items-center max-lg:gap-2 justify-start'>
 
-                                    <div onClick={() => { window.open(`${project.github}`, '_blank') }} className={`text-xs max-lg:text-[10px] font-semibold rounded-full bg-white w-fit py-3 px-11 max-lg:py-2 max-lg:px-8 text-nowrap ${project.github === 'none' ? 'cursor-not-allowed' : 'cursor-pointer'}`}>
+                                    <div onClick={() => { window.open(`${project.github}`, '_blank') }} className='text-xs max-lg:text-[10px] font-semibold rounded-full bg-white w-fit py-3 px-11 max-lg:py-2 max-lg:px-8 text-nowrap cursor-pointer'>
                                         View Github
                                     </div>
                                     <div onClick={() => { window.open(`${project.live}`, '_blank') }} className='text-xs max-lg:text-[10px] font-semibold rounded-full bg-white w-fit py-3 px-8 max-lg:py-2 max-lg:px-5 text-nowrap cursor-pointer'>
@@ -53,16 +51,11 @@ const Projects = () => {
                         </div>
                     ))
                 }
-            </div>
-            <div className='flex items-center justify-center'>
-                <Link to={'/projects'}>
-                    <div className='mt-20 bg-[#444444] text-[#ffffff] text-base rounded-md w-fit px-2.5 py-3.5 max-lg:text-xs max-lg:px-4 '>
-                        More Projects
-                    </div>
-                </Link>
+
+
             </div>
         </div>
     )
 }
 
-export default Projects
+export default Projectss
