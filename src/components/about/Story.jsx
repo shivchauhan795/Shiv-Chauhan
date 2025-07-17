@@ -3,7 +3,7 @@ const Story = () => {
     return (
         <div className='mt-24 px-20 max-xl:px-10 myfont'>
             <div  className='w-full h-[600px] max-lg:h-[400px] max-sm:h-[200px] rounded-xl bg-[#D9D9D9]'>
-        <img src={Self} alt='self' className='w-full h-full object-scale-down rounded-xl' />
+        <img src={Self} alt='self' className='w-full h-full object-cover rounded-xl' />
             </div>
             <div className='text-xs max-sm:text-[8px] font-normal mt-5 max-sm:mt-2'>
                 Yup, that’s me working at the office. In the zone.
