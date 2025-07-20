@@ -5,11 +5,20 @@ const Projects = () => {
     const projects = [
         {
             id: 1,
-            title: "Ottermap Website design",
-            description1: "The revamped website design help Ottermap achieved",
-            description2: "80% of new customer retention",
+            title: "Ottermap Website",
+            description1: "The revamped website help Ottermap achieve",
+            description2: "70% of new customer retention.",
             github: "none",
             live: "https://www.ottermap.com/",
+            image: Project1
+        },
+        {
+            id: 2,
+            title: "Ottermap SAAS Platform",
+            description1: "The revamped SAAS Platform help Ottermap persists",
+            description2: "80% of customer retention.",
+            github: "none",
+            live: "https://app.ottermap.com/",
             image: Project1
         },
     ];
@@ -26,10 +35,10 @@ const Projects = () => {
                                 {/* <div className='text-base max-lg:text-sm max-sm:text-xs font-medium text-white pb-16 max-sm:pb-8'>
                             15 min read
                         </div> */}
-                                <div className='font-semibold text-4xl max-xl:text-3xl max-lg:text-2xl max-sm:text-lg text-white w-[45%] max-sm:w-full pb-6'>
+                                <div className='font-semibold text-4xl max-xl:text-3xl max-lg:text-2xl max-sm:text-lg text-white w-[70%] max-sm:w-full pb-6'>
                                     {project.title}
                                 </div>
-                                <div className='text-xl max-xl:text-lg max-lg:text-base max-sm:text-sm font-normal text-white w-[78%] pb-7'>
+                                <div className='text-xl max-xl:text-lg max-lg:text-base max-sm:text-sm font-normal text-white w-[85%] pb-7'>
                                     <span className='opacity-50 pr-1'>
                                         {project.description1}
                                     </span>
@@ -39,10 +48,10 @@ const Projects = () => {
                                 </div>
                                 <div className='flex gap-6 items-center max-lg:gap-2 justify-start'>
 
-                                    <div onClick={() => { window.open(`${project.github}`, '_blank') }} className={`text-xs max-lg:text-[10px] font-semibold rounded-full bg-white w-fit py-3 px-11 max-lg:py-2 max-lg:px-8 text-nowrap ${project.github === 'none' ? 'cursor-not-allowed' : 'cursor-pointer'}`}>
+                                    <div onClick={() => { window.open(`${project.github}`, '_blank') }} className={`text-xs max-lg:text-[9px] font-semibold rounded-full bg-white w-fit py-3 px-11 max-lg:py-2 max-lg:px-8 text-nowrap ${project.github === 'none' ? 'cursor-not-allowed' : 'cursor-pointer'}`}>
                                         View Github
                                     </div>
-                                    <div onClick={() => { window.open(`${project.live}`, '_blank') }} className='text-xs max-lg:text-[10px] font-semibold rounded-full bg-white w-fit py-3 px-8 max-lg:py-2 max-lg:px-5 text-nowrap cursor-pointer'>
+                                    <div onClick={() => { window.open(`${project.live}`, '_blank') }} className='text-xs max-lg:text-[9px] font-semibold rounded-full bg-white w-fit py-3 px-8 max-lg:py-2 max-lg:px-5 text-nowrap cursor-pointer'>
                                         View live project
                                     </div>
                                 </div>
