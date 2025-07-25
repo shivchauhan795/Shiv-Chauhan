@@ -1,4 +1,12 @@
-import Project1 from '../../assets/landing/project1.svg';
+import Project1 from '../../assets/project/ottermapWebsite.png';
+import Project2 from '../../assets/project/ottermapPlatform.svg';
+import Project3 from '../../assets/project/secondBrain.png';
+import Project4 from '../../assets/project/chatApp.png';
+import Project5 from '../../assets/project/enlacee.png';
+import Project6 from '../../assets/project/selectify.png';
+import Project7 from '../../assets/project/eventoz.png';
+import Project8 from '../../assets/project/qrTextify.png';
+import Project9 from '../../assets/project/cseNotes.png';
 const Projectss = () => {
     const projects = [
         {
@@ -8,6 +16,9 @@ const Projectss = () => {
             description2: "70% of new customer retention.",
             github: "none",
             live: "https://www.ottermap.com/",
+            cardColor: "#04471E",
+            borderColor: "#2184484D",
+            textColor: "white",
             image: Project1
         },
         {
@@ -17,7 +28,10 @@ const Projectss = () => {
             description2: "80% of customer retention.",
             github: "none",
             live: "https://app.ottermap.com/",
-            image: Project1
+            cardColor: "#04471E",
+            borderColor: "#2184484D",
+            textColor: "white",
+            image: Project2
         },
         {
             id: 3,
@@ -26,7 +40,10 @@ const Projectss = () => {
             description2: "saving and organizing useful web links.",
             github: "https://github.com/shivchauhan795/second-brain",
             live: "https://second-brain.shivchauhan.com/",
-            image: Project1
+            cardColor: "#bc7afa",
+            borderColor: "#a346fa",
+            textColor: "black",
+            image: Project3
         },
         {
             id: 4,
@@ -35,7 +52,10 @@ const Projectss = () => {
             description2: "create room for chatting.",
             github: "https://github.com/shivchauhan795/chat-app/",
             live: "https://chat.shivchauhan.com/",
-            image: Project1
+            cardColor: "#d9cfa3",
+            borderColor: "#f5f2d5",
+            textColor: "black",
+            image: Project4
         },
         {
             id: 5,
@@ -44,7 +64,10 @@ const Projectss = () => {
             description2: "URL Shortener.",
             github: "https://github.com/shivchauhan795/Enlacee",
             live: "https://enlacee.vercel.app/",
-            image: Project1
+            cardColor: "#9b6e46",
+            borderColor: "#bc8e66",
+            textColor: "white",
+            image: Project5
         },
         {
             id: 6,
@@ -53,7 +76,10 @@ const Projectss = () => {
             description2: "photographers to get photos selected.",
             github: "https://github.com/shivchauhan795/Selectify",
             live: "https://selectify.netlify.app/",
-            image: Project1
+            cardColor: "#334155",
+            borderColor: "#9ba8bf",
+            textColor: "white",
+            image: Project6
         },
         {
             id: 7,
@@ -62,7 +88,10 @@ const Projectss = () => {
             description2: "Event Handler.",
             github: "https://github.com/shivchauhan795/Eventoz",
             live: "https://eventoz.netlify.app/",
-            image: Project1
+            cardColor: "#334155",
+            borderColor: "#9ba8bf",
+            textColor: "white",
+            image: Project7
         },
         {
             id: 8,
@@ -71,7 +100,10 @@ const Projectss = () => {
             description2: "text into custom QR code.",
             github: "https://github.com/shivchauhan795/QR-Textify",
             live: "https://shivchauhan795.github.io/QR-Textify/",
-            image: Project1
+            cardColor: "#9b98e9",
+            borderColor: "#8f8bfc",
+            textColor: "black",
+            image: Project8
         },
         {
             id: 9,
@@ -80,7 +112,10 @@ const Projectss = () => {
             description2: "More than 10,000+ downloads.",
             github: "https://github.com/shivchauhan795/CSE-Notes",
             live: "https://play.google.com/store/apps/details?id=com.shivchauhan.csenotes&hl=en_IN&gl=US",
-            image: Project1
+            cardColor: "#f99c6e",
+            borderColor: "#fa8c55",
+            textColor: "black",
+            image: Project9
         },
     ];
     return (
@@ -91,15 +126,15 @@ const Projectss = () => {
             <div className='flex flex-col gap-20 max-sm:gap-10'>
                 {
                     projects.map((project) => (
-                        <div id={project.id} className='bg-[#04471E] px-16 max-sm:px-5 py-14 max-sm:py-8 rounded-3xl flex max-lg:flex-col max-lg:gap-10 items-center justify-evenly'>
+                        <div key={project.id} id={project.id} style={{ backgroundColor: project.cardColor }} className={` px-16 max-sm:px-5 py-14 max-sm:py-8 rounded-3xl flex max-lg:flex-col max-lg:gap-10 items-center justify-evenly`}>
                             <div className='w-1/2 max-lg:w-full flex flex-col justify-center'>
                                 {/* <div className='text-base max-lg:text-sm max-sm:text-xs font-medium text-white pb-16 max-sm:pb-8'>
                             15 min read
                         </div> */}
-                                <div className='font-semibold text-4xl max-xl:text-3xl max-lg:text-2xl max-sm:text-lg text-white w-[70%] max-sm:w-full pb-6'>
+                                <div style={{ color: project.textColor }} className={`font-semibold text-4xl max-xl:text-3xl max-lg:text-2xl max-sm:text-lg text-[${project.textColor}] w-[70%] max-sm:w-full pb-6`}>
                                     {project.title}
                                 </div>
-                                <div className='text-xl max-xl:text-lg max-lg:text-base max-sm:text-sm font-normal text-white w-[85%] pb-7'>
+                                <div style={{ color: project.textColor }} className={`text-xl max-xl:text-lg max-lg:text-base max-sm:text-sm font-normal text-[${project.textColor}] w-[85%] pb-7`}>
                                     <span className='opacity-50 pr-1'>
                                         {project.description1}
                                     </span>
@@ -117,8 +152,8 @@ const Projectss = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className='max-lg:w-full flex items-center justify-center'>
-                                <img src={project.image} alt="" />
+                            <div className='max-lg:w-full flex items-center justify-center lg:h-[393.75px]'>
+                                <img width={568.35} height={393.75} style={{ borderColor: project.borderColor }} className={`border-opacity-90  border-[7.13px] rounded-xl`} src={project.image} alt="" />
                             </div>
                         </div>
                     ))

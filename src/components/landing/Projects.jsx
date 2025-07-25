@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
-import Project1 from '../../assets/landing/project1.svg';
+import Project1 from '../../assets/landing/ottermapWebsite.png';
+import Project2 from '../../assets/landing/ottermapPlatform.svg';
 
 const Projects = () => {
     const projects = [
@@ -10,6 +11,9 @@ const Projects = () => {
             description2: "70% of new customer retention.",
             github: "none",
             live: "https://www.ottermap.com/",
+            cardColor: "#04471E",
+            borderColor: "#2184484D",
+            textColor: "white",
             image: Project1
         },
         {
@@ -19,7 +23,10 @@ const Projects = () => {
             description2: "80% of customer retention.",
             github: "none",
             live: "https://app.ottermap.com/",
-            image: Project1
+            cardColor: "#04471E",
+            borderColor: "#2184484D",
+            textColor: "white",
+            image: Project2
         },
     ];
     return (
@@ -30,15 +37,15 @@ const Projects = () => {
             <div className='flex flex-col gap-20 max-sm:gap-10'>
                 {
                     projects.map((project) => (
-                        <div id={project.id} className='bg-[#04471E] px-16 max-sm:px-5 py-14 max-sm:py-8 rounded-3xl flex max-lg:flex-col max-lg:gap-10 items-center justify-evenly'>
+                        <div key={project.id} id={project.id} style={{ backgroundColor: project.cardColor }} className={` px-16 max-sm:px-5 py-14 max-sm:py-8 rounded-3xl flex max-lg:flex-col max-lg:gap-10 items-center justify-evenly`}>
                             <div className='w-1/2 max-lg:w-full flex flex-col justify-center'>
                                 {/* <div className='text-base max-lg:text-sm max-sm:text-xs font-medium text-white pb-16 max-sm:pb-8'>
                             15 min read
                         </div> */}
-                                <div className='font-semibold text-4xl max-xl:text-3xl max-lg:text-2xl max-sm:text-lg text-white w-[70%] max-sm:w-full pb-6'>
+                                <div style={{ color: project.textColor }} className={`font-semibold text-4xl max-xl:text-3xl max-lg:text-2xl max-sm:text-lg text-[${project.textColor}] w-[70%] max-sm:w-full pb-6`}>
                                     {project.title}
                                 </div>
-                                <div className='text-xl max-xl:text-lg max-lg:text-base max-sm:text-sm font-normal text-white w-[85%] pb-7'>
+                                <div style={{ color: project.textColor }} className={`text-xl max-xl:text-lg max-lg:text-base max-sm:text-sm font-normal text-[${project.textColor}] w-[85%] pb-7`}>
                                     <span className='opacity-50 pr-1'>
                                         {project.description1}
                                     </span>
@@ -56,8 +63,8 @@ const Projects = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className='max-lg:w-full flex items-center justify-center'>
-                                <img src={project.image} alt="" />
+                            <div className='max-lg:w-full flex items-center justify-center lg:h-[393.75px]'>
+                                <img width={568.35} height={393.75} style={{ borderColor: project.borderColor }} className={`border-opacity-90  border-[7.13px] rounded-xl`} src={project.image} alt="" />
                             </div>
                         </div>
                     ))
