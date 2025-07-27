@@ -2,6 +2,21 @@ import { Link } from 'react-router-dom';
 import Project1 from '../../assets/landing/ottermapWebsite.png';
 import Project2 from '../../assets/landing/ottermapPlatform.svg';
 
+import NextJS from '../../assets/landing/techstackused/nextjs.svg';
+import ReactJS from '../../assets/landing/techstackused/reactjs.svg';
+import Figma from '../../assets/landing/techstackused/figma.svg';
+import Github from '../../assets/landing/techstackused/github.svg';
+import Tailwind from '../../assets/landing/techstackused/tailwindcss.svg';
+import Javascript from '../../assets/landing/techstackused/javascript.svg';
+import Prisma from '../../assets/landing/techstackused/prisma.svg';
+import Typescript from '../../assets/landing/techstackused/typescript.svg';
+import AWS from '../../assets/landing/techstackused/aws.svg';
+import NodeJS from '../../assets/landing/techstackused/nodejs.svg';
+import MongoDB from '../../assets/landing/techstackused/mongodb.svg';
+import HTML from '../../assets/landing/techstackused/html.svg';
+import CSS from '../../assets/landing/techstackused/css.svg';
+import Android from '../../assets/landing/techstackused/android.svg';
+import Java from '../../assets/landing/techstackused/java.svg';
 const Projects = () => {
     const projects = [
         {
@@ -14,7 +29,9 @@ const Projects = () => {
             cardColor: "#04471E",
             borderColor: "#2184484D",
             textColor: "white",
-            image: Project1
+            image: Project1,
+            imageAltText: "Ottermap Website",
+            icons: [NextJS, Javascript, Tailwind, Figma, Github],
         },
         {
             id: 2,
@@ -26,7 +43,9 @@ const Projects = () => {
             cardColor: "#04471E",
             borderColor: "#2184484D",
             textColor: "white",
-            image: Project2
+            image: Project2,
+            imageAltText: "Ottermap Saas Platform",
+            icons: [ReactJS, Javascript, Tailwind, Figma, Github],
         },
     ];
     return (
@@ -62,9 +81,21 @@ const Projects = () => {
                                         View live project
                                     </div>
                                 </div>
+                                <div style={{ color: project.textColor }} className='flex items-center gap-5 mt-10'>
+                                    <div className='text-sm font-bold'>
+                                        TECHNOLOGY USED:
+                                    </div>
+                                    <div className='flex items-center gap-2.5'>
+                                        {
+                                            project.icons.map((icon) => (
+                                                <img key={icon} src={icon} className='w-6 h-6 min-w-6 min-h-6 object-contain shrink-0' alt="" />
+                                            ))
+                                        }
+                                    </div>
+                                </div>
                             </div>
                             <div className='max-lg:w-full flex items-center justify-center lg:h-[393.75px]'>
-                                <img width={568.35} height={393.75} style={{ borderColor: project.borderColor }} className={`border-opacity-90  border-[7.13px] rounded-xl`} src={project.image} alt="" />
+                                <img width={568.35} height={393.75} style={{ borderColor: project.borderColor }} className={`border-opacity-90  border-[7.13px] rounded-xl`} src={project.image} alt={project.imageAltText} />
                             </div>
                         </div>
                     ))

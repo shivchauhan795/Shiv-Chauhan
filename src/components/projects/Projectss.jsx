@@ -7,6 +7,22 @@ import Project6 from '../../assets/project/selectify.png';
 import Project7 from '../../assets/project/eventoz.png';
 import Project8 from '../../assets/project/qrTextify.png';
 import Project9 from '../../assets/project/cseNotes.png';
+
+import NextJS from '../../assets/landing/techstackused/nextjs.svg';
+import ReactJS from '../../assets/landing/techstackused/reactjs.svg';
+import Figma from '../../assets/landing/techstackused/figma.svg';
+import Github from '../../assets/landing/techstackused/github.svg';
+import Tailwind from '../../assets/landing/techstackused/tailwindcss.svg';
+import Javascript from '../../assets/landing/techstackused/javascript.svg';
+import Prisma from '../../assets/landing/techstackused/prisma.svg';
+import Typescript from '../../assets/landing/techstackused/typescript.svg';
+import AWS from '../../assets/landing/techstackused/aws.svg';
+import NodeJS from '../../assets/landing/techstackused/nodejs.svg';
+import MongoDB from '../../assets/landing/techstackused/mongodb.svg';
+import HTML from '../../assets/landing/techstackused/html.svg';
+import CSS from '../../assets/landing/techstackused/css.svg';
+import Android from '../../assets/landing/techstackused/android.svg';
+import Java from '../../assets/landing/techstackused/java.svg';
 const Projectss = () => {
     const projects = [
         {
@@ -19,7 +35,9 @@ const Projectss = () => {
             cardColor: "#04471E",
             borderColor: "#2184484D",
             textColor: "white",
-            image: Project1
+            image: Project1,
+            imageAltText: "Ottermap Website",
+            icons: [NextJS, Javascript, Tailwind, Figma, Github],
         },
         {
             id: 2,
@@ -31,7 +49,9 @@ const Projectss = () => {
             cardColor: "#04471E",
             borderColor: "#2184484D",
             textColor: "white",
-            image: Project2
+            image: Project2,
+            imageAltText: "Ottermap Saas Platform",
+            icons: [ReactJS, Javascript, Tailwind, Figma, Github],
         },
         {
             id: 3,
@@ -43,7 +63,9 @@ const Projectss = () => {
             cardColor: "#bc7afa",
             borderColor: "#a346fa",
             textColor: "black",
-            image: Project3
+            image: Project3,
+            imageAltText: "Second Brain",
+            icons: [NextJS, Prisma, Typescript, Tailwind, AWS],
         },
         {
             id: 4,
@@ -55,7 +77,9 @@ const Projectss = () => {
             cardColor: "#d9cfa3",
             borderColor: "#f5f2d5",
             textColor: "black",
-            image: Project4
+            image: Project4,
+            imageAltText: "Chat App",
+            icons: [ReactJS, NodeJS, Tailwind, Github, AWS],
         },
         {
             id: 5,
@@ -67,7 +91,9 @@ const Projectss = () => {
             cardColor: "#9b6e46",
             borderColor: "#bc8e66",
             textColor: "white",
-            image: Project5
+            image: Project5,
+            imageAltText: "Enlacee",
+            icons: [ReactJS, NodeJS, Tailwind, Github, MongoDB],
         },
         {
             id: 6,
@@ -79,7 +105,9 @@ const Projectss = () => {
             cardColor: "#334155",
             borderColor: "#9ba8bf",
             textColor: "white",
-            image: Project6
+            image: Project6,
+            imageAltText: "Selectify",
+            icons: [ReactJS, NodeJS, Tailwind, Github, MongoDB],
         },
         {
             id: 7,
@@ -91,7 +119,9 @@ const Projectss = () => {
             cardColor: "#334155",
             borderColor: "#9ba8bf",
             textColor: "white",
-            image: Project7
+            image: Project7,
+            imageAltText: "Eventoz",
+            icons: [ReactJS, NodeJS, Tailwind, Github, MongoDB],
         },
         {
             id: 8,
@@ -103,7 +133,9 @@ const Projectss = () => {
             cardColor: "#9b98e9",
             borderColor: "#8f8bfc",
             textColor: "black",
-            image: Project8
+            image: Project8,
+            imageAltText: "QR Textify",
+            icons: [HTML, CSS, Javascript, Github],
         },
         {
             id: 9,
@@ -115,7 +147,9 @@ const Projectss = () => {
             cardColor: "#f99c6e",
             borderColor: "#fa8c55",
             textColor: "black",
-            image: Project9
+            image: Project9,
+            imageAltText: "CSE Notes",
+            icons: [Android, Java, Github],
         },
     ];
     return (
@@ -151,9 +185,21 @@ const Projectss = () => {
                                         View live project
                                     </div>
                                 </div>
+                                <div style={{ color: project.textColor }} className='flex items-center gap-5 mt-10'>
+                                    <div className='text-sm font-bold'>
+                                        TECHNOLOGY USED:
+                                    </div>
+                                    <div className='flex items-center gap-2.5'>
+                                        {
+                                            project.icons.map((icon) => (
+                                                <img key={icon} src={icon} className='w-6 h-6 min-w-6 min-h-6 object-contain shrink-0' alt="" />
+                                            ))
+                                        }
+                                    </div>
+                                </div>
                             </div>
                             <div className='max-lg:w-full flex items-center justify-center lg:h-[393.75px]'>
-                                <img width={568.35} height={393.75} style={{ borderColor: project.borderColor }} className={`border-opacity-90  border-[7.13px] rounded-xl`} src={project.image} alt="" />
+                                <img width={568.35} height={393.75} style={{ borderColor: project.borderColor }} className={`border-opacity-90  border-[7.13px] rounded-xl`} src={project.image} alt={project.imageAltText} />
                             </div>
                         </div>
                     ))
