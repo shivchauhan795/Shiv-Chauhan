@@ -1,4 +1,4 @@
-import Self from '../../assets/self.jpg';
+import Self from '../../assets/shiv_chauhan.jpg';
 const Story = () => {
     return (
         <div className='mt-24 px-20 max-xl:px-10 myfont'>

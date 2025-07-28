@@ -9,12 +9,12 @@ import About from './pages/about/About.jsx'
 import Projects from './pages/projects/Projects.jsx'
 
 const router = createBrowserRouter([
+  // {
+  //   path: "/",
+  //   element: <><Navbar /><App /></>
+  // },
   {
     path: "/",
-    element: <><Navbar /><App /></>
-  },
-  {
-    path: "/work",
     element: <Landing />
   },
   {
