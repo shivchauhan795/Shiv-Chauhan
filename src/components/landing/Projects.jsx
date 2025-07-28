@@ -82,7 +82,7 @@ const Projects = () => {
                                     </div>
                                 </div>
                                 <div style={{ color: project.textColor }} className='flex items-center gap-5 mt-10'>
-                                    <div className='text-sm font-bold'>
+                                    <div className='text-sm font-bold max-sm:text-[10px]'>
                                         TECHNOLOGY USED:
                                     </div>
                                     <div className='flex items-center gap-2.5'>
